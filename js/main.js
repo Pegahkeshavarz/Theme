@@ -25,12 +25,8 @@ function hoverSwing() {
 
 function giveBackground(origScrollTop) {
 	var nowScroll = $(document).scrollTop();
-	var homeTop = $('#photoContainer').offset().top;
-
-	var navheightString = $('.navbar').css('height');
-	var navheight = 0;
-
-	navheight = navheightString.slice(0, -2);
+	var homeTop = Number($('.intro-body').css('height').slice(0,-2));
+	var navheight = Number($('.navbar').css('height').slice(0,-2));
 
 	if (origScrollTop.top > nowScroll && nowScroll < homeTop-navheight) {
 		//Scroll up, no background if not over content
@@ -70,15 +66,10 @@ $(document).ready( function() {
 	origScrollTop.top = $(document).scrollTop();
 
 	//Calculations for if screen starts at content
-	var homeTop = $('#photoContainer').offset().top;	//content position
-	var navheightString = $('.navbar').css('height');	//Height of navbar as string
-	var navheight = 0;									//empty var
-	navheight = navheightString.slice(0, -2);			//pop out 'px' from height
+	var homeTop = Number($('.intro-body').css('height').slice(0,-2));	//content position
+	var navheight = Number($('.navbar').css('height').slice(0,-2));		//Height of navbar as string
 
-	// console.log(origScrollTop.top);
-	// console.log(homeTop-navheight);
-
-	if (origScrollTop.top > homeTop-navheight) {		//if start in content...
+	if (origScrollTop.top > homeTop-navheight) {						//if start in content...
 		bg(false);	
 	}
 
