@@ -16,21 +16,18 @@ function bg(bool) {
 		//Remove background to the navbar on scroll up
 		if (bool) {
 			$('.navbar').stop().css('background', 'transparent');
-			// console.log('scrollup no bg');
-			// $('.navbar-custom a').css('color', 'white');
 			$('.navbar-custom a').stop().animate({color: 'white'});
 		} else if (!bool) {
 		//Give background to the navbar on scroll down
 			$('.navbar').stop().css('background', 'rgba(204, 204, 204, 0.8)');
 			$('.navbar').stop().css('opacity', '10%');
 			$('.navbar-custom a').stop().animate({color: 'black'});
-			// $('.navbar-custom a').css('color', 'black');
 		}
 }
 
 
 $(document).ready( function() {
-	
+
 	var origScrollTop = {top: 0}
 	origScrollTop.top = $(document).scrollTop();
 
