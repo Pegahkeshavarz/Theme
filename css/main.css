@@ -161,9 +161,22 @@ font-size: 1.7em
   -moz-box-shadow-: 3px 3px 3px 3px #B3B3B3;
   box-shadow: 3px 3px 3px 3px #B3B3B3;
 }
-#Home p {
-  border: 5px solid #FFFFFF;
-  -webkit-box-shadow-: 3px 3px 3px 3px #B3B3B3;
-  -moz-box-shadow-: 3px 3px 3px 3px #B3B3B3;
-  box-shadow: 3px 3px 3px 3px #B3B3B3;
+#homeContent {
+  border-left: 1px solid #B3B3B3;
+  border-right: 1px solid #B3B3B3;
+  padding: 20px;
+  margin-top: -50px;
+  margin-bottom: 50px;
+}
+#companies {
+  list-style-type: none;
+  text-align: center;
+}
+#companies li {
+  width: 80px;
+  margin: 20px;
+  display: inline-block;
+}
+#companies li a img {
+  width: 80px;
 }
