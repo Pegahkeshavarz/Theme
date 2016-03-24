@@ -1,0 +1,35 @@
+p,
+h1,h2,h3,h4,h5,h6,span{
+	font-family: 'Open Sans', sans-serif;
+}
+
+a{
+	color:white;
+	text-decoration: none;
+}
+
+/* ABOVE ALL */
+
+#about{
+	/*position: absolute;*/
+	margin-top: 125px !important;
+}
+
+/*.fa {
+font-size: 1.2em;
+}
+*/
+/*
+
+/* For Small devices */
+@media only screen and (max-width:480px){
+
+}
+
+/* For Large devices */
+@media only screen and (min-width:960px) {
+
+.specific_progress{
+	display: none;
+}
+}
