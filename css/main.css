@@ -145,9 +145,23 @@ font-size: 1.7em
 
 
 /*Howard's Section*/
+#photoContainer  {
+  text-align: center;
+}
 #photoContainer img {
-  height: 100px;
-  border-radius: 50px;
+  width: 200px;
+  margin: 30px auto;
+  border: 5px solid #FFFFFF;
+
+  -webkit-border-radius-: 100px;
+  -moz-border-radius-: 100px;
+  border-radius: 100px;
+
+  -webkit-box-shadow-: 3px 3px 3px 3px #B3B3B3;
+  -moz-box-shadow-: 3px 3px 3px 3px #B3B3B3;
+  box-shadow: 3px 3px 3px 3px #B3B3B3;
+}
+#Home p {
   border: 5px solid #FFFFFF;
   -webkit-box-shadow-: 3px 3px 3px 3px #B3B3B3;
   -moz-box-shadow-: 3px 3px 3px 3px #B3B3B3;
