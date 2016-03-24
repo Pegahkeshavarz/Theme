@@ -11,14 +11,16 @@ a{
 /* ABOVE ALL */
 
 #about{
-	/*position: absolute;*/
-	margin-top: 125px !important;
+	position: absolute;
+	/*margin-top: 50px !important;*/
+	height: 600px;
+	width: 100%;
 }
 
 /*.fa {
 font-size: 1.2em;
 }
-*/
+
 /*
 
 /* For Small devices */
@@ -29,7 +31,15 @@ font-size: 1.2em;
 /* For Large devices */
 @media only screen and (min-width:960px) {
 
-.specific_progress{
-	display: none;
-}
+	.specific_progress{
+		display: none;
+	}
+	h1{
+	    margin: 0px !important;
+	}
+	#web .container{
+		/*height: auto;*/
+		padding: 50px;
+		border-bottom: 2px solid grey;
+	}
 }
