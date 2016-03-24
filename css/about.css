@@ -12,13 +12,14 @@ a{
 
 #about{
 	/*position: absolute;*/
-	margin-top: 125px !important;
+	margin-top: 50px !important;
+	height: 600px;
 }
 
 /*.fa {
 font-size: 1.2em;
 }
-*/
+
 /*
 
 /* For Small devices */
@@ -29,7 +30,7 @@ font-size: 1.2em;
 /* For Large devices */
 @media only screen and (min-width:960px) {
 
-.specific_progress{
-	display: none;
-}
+	.specific_progress{
+		display: none;
+	}
 }
