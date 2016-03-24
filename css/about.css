@@ -34,12 +34,27 @@ font-size: 1.2em;
 	.specific_progress{
 		display: none;
 	}
-	h1{
+	#about h2{
 	    margin: 0px !important;
 	}
-	#web .container{
+	section div.container{
 		/*height: auto;*/
 		padding: 50px;
 		border-bottom: 2px solid grey;
+	}
+	.panel-group .badge{
+		float: right;
+	}
+
+	section#about{
+		padding-bottom: 30px !important;
+	}
+
+	#experience h1{
+		/*padding-bottom: 15px !important;*/
+		/*margin: 0px !important;*/
+	}
+	#experience{
+		/*margin-bottom: 30px;*/
 	}
 }
