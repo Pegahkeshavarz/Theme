@@ -5,18 +5,12 @@ function swingLogo() {
 
 function giveBackground(origScrollTop) {
 	var nowScroll = $(document).scrollTop();
-	// console.log(origScrollTop.top);
-	// console.log(nowScroll);
 	var homeTop = $('#photoContainer').offset().top;
 
 	var navheightString = $('.navbar').css('height');
 	var navheight = 0;
 
 	navheight = navheightString.slice(0, -2);
-
-	console.log(homeTop-navheight);
-	console.log(homeTop);
-	console.log(navheight);
 
 	if (origScrollTop.top > nowScroll && nowScroll < homeTop-navheight) {
 		//Scroll up, no background if not over content
@@ -32,10 +26,12 @@ function bg(bool) {
 		if (bool) {
 			$('.navbar').stop().css('background', 'transparent');
 			console.log('scrollup no bg');
+			$('.navbar-custom a').css('color', 'white');
 		} else if (!bool) {
 		//Give background to the navbar on scroll down
 			$('.navbar').stop().css('background', 'rgba(204, 204, 204, 0.8)');
 			$('.navbar').stop().css('opacity', '10%');
+			$('.navbar-custom a').css('color', 'black');
 		}
 }
 
@@ -51,6 +47,19 @@ $(document).ready( function() {
 
 	var origScrollTop = {top: 0}
 	origScrollTop.top = $(document).scrollTop();
+
+	//Calculations for if screen starts at content
+	var homeTop = $('#photoContainer').offset().top;	//content position
+	var navheightString = $('.navbar').css('height');	//Height of navbar as string
+	var navheight = 0;									//empty var
+	navheight = navheightString.slice(0, -2);			//pop out 'px' from height
+
+	console.log(origScrollTop.top);
+	console.log(homeTop-navheight);
+
+	if (origScrollTop.top > homeTop-navheight) {		//if start in content...
+		bg(false);	
+	}
 
 	$(document).scroll( function() {giveBackground(origScrollTop)} );
 })
