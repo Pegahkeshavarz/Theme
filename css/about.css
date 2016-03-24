@@ -9,24 +9,26 @@ a{
 }
 
 /* ABOVE ALL */
-
-#about{
-	position: absolute;
-	/*margin-top: 50px !important;*/
-	height: 600px;
-	width: 100%;
+.specific_progress{
+		display: none;
+	}
 }
-
-/*.fa {
-font-size: 1.2em;
-}
-
-/*
+.panel-group .badge{
+		float: right;
+	}
 
 /* For Small devices */
 @media only screen and (max-width:480px){
-
+.specific_progress{
+		display: none;
+	}
 }
+
+@media only screen and (max-width:960px) {
+	.specific_progress{
+		display: none;
+	}
+}	
 
 /* For Large devices */
 @media only screen and (min-width:960px) {
