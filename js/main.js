@@ -1,6 +1,26 @@
 //Should swing the Logos on when the Logos appear in view **NOT WORKING**
-function swingLogo() {
-	$(this).addClass('animated swing');
+function onScreenLogo() {
+	var currScrollTop = $(document).scrollTop();
+
+	var logoScrollTop = $('#companies').offset().top;
+	var logoHeight = Number($('#companies').css('height').slice(0,2));
+
+	var winHeight = $(window).height();
+
+	console.log(currScrollTop);
+	console.log(logoScrollTop);
+	console.log(logoHeight);
+	console.log(logoScrollTop+logoHeight);
+
+
+	if (currScrollTop+winHeight >= logoScrollTop+logoHeight) {
+		$('.cImage').addClass('animated bounce');
+	} else {
+		$('.cImage').removeClass('animated bounce');
+	}
+}
+function hoverSwing() {
+	$('.cImage').hover( function(){$(this).addClass('animated swing')} , function(){$(this).removeClass('animated swing')} );
 }
 
 function giveBackground(origScrollTop) {
@@ -25,7 +45,7 @@ function bg(bool) {
 		//Remove background to the navbar on scroll up
 		if (bool) {
 			$('.navbar').stop().css('background', 'transparent');
-			console.log('scrollup no bg');
+			// console.log('scrollup no bg');
 			$('.navbar-custom a').css('color', 'white');
 		} else if (!bool) {
 		//Give background to the navbar on scroll down
@@ -34,6 +54,7 @@ function bg(bool) {
 			$('.navbar-custom a').css('color', 'black');
 		}
 }
+
 
 $(document).ready( function() {
 	//Not Used currently...
@@ -54,12 +75,16 @@ $(document).ready( function() {
 	var navheight = 0;									//empty var
 	navheight = navheightString.slice(0, -2);			//pop out 'px' from height
 
-	console.log(origScrollTop.top);
-	console.log(homeTop-navheight);
+	// console.log(origScrollTop.top);
+	// console.log(homeTop-navheight);
 
 	if (origScrollTop.top > homeTop-navheight) {		//if start in content...
 		bg(false);	
 	}
 
-	$(document).scroll( function() {giveBackground(origScrollTop)} );
+	$(document).scroll( function() {
+		giveBackground(origScrollTop);
+		onScreenLogo();
+	} );
+	hoverSwing();
 })
