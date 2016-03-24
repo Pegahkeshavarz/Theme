@@ -58,12 +58,49 @@
         <div class="row">
           <div class="col-md-8 col-md-offset-2">
                <h4 class="intro-message"><strong>WELCOME TO MY PAGE</strong></h4>
-               <button type="button" name="button" class="btn btn-default btn-custom">Contact <i class="fa fa-envelope"></i></button>
+
+               <!--Update button for modal-->
+               <button type="button" name="button" class="btn btn-default btn-custom" data-toggle="modal" data-target="#contactMe">Contact <i class="fa fa-envelope"></i></button>
         </div>
       </div>
+
+      <!--Add this for the arrow-->
+      <img src="./img/howard/down.png" id="down">
+
     </div>
     </section>
 
+
+
+<!--MODAL FORM CONTACTME AREA-->
+    <div id="contactMeForm" class="container">
+      <!-- Modal -->
+      <div class="modal fade" id="contactMe" role="dialog">
+        <div class="modal-dialog modal-sm">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Contact Me</h4>
+            </div>
+            <form id="contactForm">
+                <div class="modal-body">
+                        <input type="text" placeholder="Name">
+                        <input type="text" placeholder="Email">
+                        <textarea placeholder="Message"></textarea>
+                </div>
+                <div class="modal-footer">
+                  <input type="submit" class="btn btn-default" data-dismiss="modal" value="Send!" form="contactForm">
+                </div>
+            </form>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+            <!-- ----Content Starts Here---- -->
     <section id="#Home" class="container content-section">
       <div id="photoContainer">
         <img src="./img/howard/person.jpg">
@@ -77,12 +114,12 @@
       </div>
 
       <ul id="companies" class="row">
-        <li class="company"><a href="http://www.apple.com"><img class="cImage" src="./img/howard/apple.png"></a></li>
-        <li class="company"><a href="http://www.facebook.com"><img class="cImage" src="./img/howard/facebook.gif"></a></li>
-        <li class="company"><a href="http://www.google.com"><img class="cImage" src="./img/howard/google.png"></a></li>
-        <li class="company"><a href="http://www.intel.com"><img class="cImage" src="./img/howard/intel.png"></a></li>
-        <li class="company"><a href="http://www.microsoft.com"><img class="cImage" src="./img/howard/windows.png"></a></li>
-        <li class="company"><a href="http://www.youtube.com"><img class="cImage" src="./img/howard/youtube.png"></a></li>
+        <li class="company"><a href="http://www.apple.com" target="_blank"><img class="cImage" src="./img/howard/apple.png"></a></li>
+        <li class="company"><a href="http://www.facebook.com" target="_blank"><img class="cImage" src="./img/howard/facebook.gif"></a></li>
+        <li class="company"><a href="http://www.google.com" target="_blank"><img class="cImage" src="./img/howard/google.png"></a></li>
+        <li class="company"><a href="http://www.intel.com" target="_blank"><img class="cImage" src="./img/howard/intel.png"></a></li>
+        <li class="company"><a href="http://www.microsoft.com" target="_blank"><img class="cImage" src="./img/howard/windows.png"></a></li>
+        <li class="company"><a href="http://www.youtube.com" target="_blank"><img class="cImage" src="./img/howard/youtube.png"></a></li>
       </ul>
 
       <div id="foot"></div>
@@ -99,5 +136,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 
     <script type="text/javascript" src="./js/main.js"></script>
+    <script type="text/javascript" src="./js/home.js"></script>
   </body>
 </html>
