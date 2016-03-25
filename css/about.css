@@ -8,7 +8,7 @@ a{
 	text-decoration: none;
 }
 
-/* ABOVE ALL */
+/* CSS for ALL devices */
 .specific_progress{
 		display: none;
 	}
@@ -17,21 +17,63 @@ a{
 		float: right;
 	}
 
+.progress-bar:hover{
+	cursor: pointer;
+}
+
+
+#aboutFoot {
+  width: 100%;
+  height: 50px;
+  padding: 100px 0;
+  text-align: center;
+  color: #f4f4f4;
+  background: url(../img/header.png) no-repeat bottom center scroll;
+  background-color: #333333;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 /* For Small devices */
 @media only screen and (max-width:480px){
-.specific_progress{
+	.specific_progress{
 		display: none;
+	}
+	.panel-group .notCurrent{
+		/*float: right;*/
+		display: none;
+	}
+	.panel-title {
+		font-size: 14px;
+	}
+	section#about div.container{
+		/*height: auto;*/
+		padding: 50px;
+		border-bottom: 2px solid grey;
 	}
 }
 
-@media only screen and (max-width:960px) {
+@media only screen and (max-width:997px) {
 	.specific_progress{
 		display: none;
+	}
+	.panel-group .badge{
+		float: right;
+	}
+	section#about div.container{
+		/*height: auto;*/
+		padding: 50px;
+		border-bottom: 2px solid grey;
+	}
+	.about_sections h2{
+		margin-bottom: 10px !important;
 	}
 }	
 
 /* For Large devices */
-@media only screen and (min-width:960px) {
+@media only screen and (min-width:997px) {
 
 	.specific_progress{
 		display: none;
@@ -39,24 +81,12 @@ a{
 	#about h2{
 	    margin: 0px !important;
 	}
-	section div.container{
+	section#about div.container{
 		/*height: auto;*/
 		padding: 50px;
 		border-bottom: 2px solid grey;
 	}
 	.panel-group .badge{
 		float: right;
-	}
-
-	section#about{
-		padding-bottom: 30px !important;
-	}
-
-	#experience h1{
-		/*padding-bottom: 15px !important;*/
-		/*margin: 0px !important;*/
-	}
-	#experience{
-		/*margin-bottom: 30px;*/
 	}
 }
