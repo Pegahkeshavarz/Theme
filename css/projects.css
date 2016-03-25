@@ -63,7 +63,7 @@
 img{
   width: 100%;
   height: 200px !important;
-      cursor: pointer;
+  cursor: pointer;
 }
 
 p{
@@ -74,6 +74,10 @@ p{
 
 }
 
+.intro-message:hover{
+  cursor: pointer;
+  text-decoration: overline;
+}
 .image{
   border: 4px solid rgb(111,219,193);
 }
