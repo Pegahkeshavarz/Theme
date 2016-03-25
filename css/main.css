@@ -147,6 +147,13 @@ font-size: 1.7em
   #down:hover {
     cursor: pointer;
   }
+  #homeContent {
+    border-left: 1px solid #B3B3B3;
+    border-right: 1px solid #B3B3B3;
+    padding: 20px;
+    margin-top: -50px;
+    margin-bottom: 50px;
+  }
 }
 
 
@@ -182,13 +189,6 @@ font-size: 1.7em
   box-shadow: 3px 3px 3px 3px #B3B3B3;
 }
 @media only screen and (min-width: 767) {
-  #homeContent {
-    border-left: 1px solid #B3B3B3;
-    border-right: 1px solid #B3B3B3;
-    padding: 20px;
-    margin-top: -50px;
-    margin-bottom: 50px;
-  }
 }
 #companies {
   list-style-type: none;
@@ -248,7 +248,7 @@ font-size: 1.7em
 #homeContent .row h3 {
   float: left;
   cursor: default;
-  margin: auto 10px;
+  margin: auto 20px;
 }
 #homeContent p {
   cursor: default;
