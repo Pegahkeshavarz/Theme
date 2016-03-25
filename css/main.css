@@ -1,4 +1,3 @@
-
 html {
   width: 100%;
   height: 100%;
@@ -50,13 +49,13 @@ a:focus {
 .navbar-brand:focus {
   outline: none;
 }
-.navbar-custom a {
-  color: white;
+.navbar-inverse a {
+  color: white !important;
 }
-.navbar-custom .nav li a {
-  -webkit-transition: background 0s ease-in-out;
-  -moz-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
+.navbar-inverse .nav li a {
+  -webkit-transition: background 0s ease-in-out !important;
+  -moz-transition: background 0.3s ease-in-out !important;
+  transition: background 0.3s ease-in-out ;
 }
 .navbar-custom .nav li a:hover {
   outline: none;
@@ -113,14 +112,14 @@ a:focus {
 }
 
 .btn-custom{
-
-  background-color: transparent;
+background-color: transparent;
 border: 2px solid white;
 color: white;
 width: 154px;
 height: 64px;
 font-size: 1.7em
 }
+
 @media (min-width: 767px) {
   .intro {
     height: 100%;

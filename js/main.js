@@ -9,7 +9,7 @@ function giveBackground(origScrollTop,  homeTop, navheight) {
 		bg(true);
 	} else if (origScrollTop.top < nowScroll) {
 		bg(false);
-	} 
+	}
 
 	origScrollTop.top = $(document).scrollTop();
 }
@@ -32,7 +32,7 @@ function arrowDown () {
 
 			var homeTop = Number($('.intro-body').css('height').slice(0,-2));	//content position
 			var navheight = Number($('.navbar').css('height').slice(0,-2));		//Height of navbar as string
-			
+
 			var scrollTo = homeTop - navheight;
 			// console.log('click down', scrollTo);
 			$('body').stop().animate({scrollTop: scrollTo})
@@ -77,7 +77,7 @@ $(document).ready( function() {
 
 	//Checks if it's already in content
 	if (origScrollTop.top > homeTop-navheight) {						//if start in content...
-		bg(false);	
+		bg(false);
 	}
 	//On scroll, navbar background or not
 	$(document).scroll( function() {

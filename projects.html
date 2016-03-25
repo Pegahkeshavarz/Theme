@@ -13,13 +13,16 @@
     <!-- Custom styles for this template -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link href="css/main.css" rel="stylesheet">
+    <link href="css/projects.css" rel="stylesheet">
+
   </head>
 
   <body id="page-top" data-spy="scroll" dara-target=".navbar-custom">
 
-    <nav class="navbar navbar-custom navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-custom navbar-fixed-top">
       <div class="container">
         <div class="navbar-header page-scrol">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -50,81 +53,140 @@
       </div>
     </nav>
 
-    <section class="intro">
+<!-- End of nav bar -->
+
+  <section class="intro">
     <div class="intro-body">
       <div class="container">
         <div class="row">
           <div class="col-md-8 col-md-offset-2">
-               <h4 class="intro-message"><strong>My Projects</strong></h4>
-               <button type="button" name="button" class="btn btn-default btn-custom">Contact <i class="fa fa-envelope"></i></button>
+
+               <h4 class="intro-message"><strong>View My Projects <i class="fa fa-archive" data-toggle="tooltip" data-placement="left" title="Click Me :D"></i></strong></h4>
+
+            <button type="button" name="button" class="btn btn-default btn-custom" data-toggle="modal" data-target="#contactMe">Contact <i class="fa fa-envelope"></i></button>
         </div>
       </div>
     </div>
+        </div>
     </section>
 
-    <section id="projects" class="container content-section">
-      <div class="container">
-        <div class="row">
 
-          <div class="col-md-4 col-xs-12">
-           <img src="img/m1.jpeg" alt=""  class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel"/>
-           <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-body">
-                 <div class="row">
-                   <div class="col-md-6 col-md-offset-3">
-                     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="20000">
-                       <!-- Indicators -->
-                       <ol class="carousel-indicators">
-                         <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                         <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                         <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                         <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-                         <li data-target="#carousel-example-generic" data-slide-to="4"></li>
-                         <li data-target="#carousel-example-generic" data-slide-to="5"></li>
-                       </ol>
+    <!--MODAL FORM CONTACTME AREA-->
+        <div id="contactMeForm" class="container">
+          <!-- Modal -->
+          <div class="modal fade" id="contactMe" role="dialog">
+            <div class="modal-dialog modal-sm">
 
-                       <!-- Wrapper for slides -->
-                       <div class="carousel-inner" role="listbox">
-                         <div class="item active">
-                           <img src="img/m1.jpeg" class="img-thumbnail">
-                         </div>
-
-                         <div class="item">
-                           <img src="img/m2.jpeg" class="img-thumbnail">
-                         </div>
-
-                          <div class="item">
-                           <img src="img/m3.jpg" class="img-thumbnail">
-                         </div>
-                       </div>
-
-                       <!-- Controls -->
-                       <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                          <i class="fa fa-hand-o-left" aria-hidden="true"></i>
-                         <span class="sr-only">Previous</span>
-                       </a>
-                       <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                         <i class="fa fa-hand-o-left" aria-hidden="true"></i>
-                         <span class="sr-only">Next</span>
-                       </a>
-                     </div>
-                   </div>
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Contact Me</h4>
                 </div>
-             </div>
+                <form id="contactForm">
+                    <div class="modal-body">
+                            <input type="text" placeholder="Name">
+                            <input type="text" placeholder="Email">
+                            <textarea placeholder="Message"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                      <input type="submit" class="btn btn-default" data-dismiss="modal" value="Send!" form="contactForm">
+                    </div>
+                </form>
+              </div>
+
             </div>
           </div>
         </div>
 
-          <div class="col-md-4 col-xs-12">
+    <div id="openMe">
+      <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 
+        <div class="row">
+          <div class="col-md-2">
+            <h4>My Projects</h4>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
           </div>
-          <div class="col-md-4 col-xs-12">
 
+          <div class="col-md-10">
+
+              <div class="row">
+                <div class="col-md-4">
+                 <img class="clientsOpen"  src="img/1.jpeg" alt="" />
+                </div>
+                <div class="col-md-4">
+                  <img class="clientsOpen" src="img/2.jpg" alt="" />
+                </div>
+                <div class="col-md-4">
+                  <img class="clientsOpen" src="img/5.jpeg" alt="" />
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-4">
+                  <img class="clientsOpen" src="img/m1.jpeg" alt="" />
+                </div>
+                <div class="col-md-4">
+                  <img class="clientsOpen" src="img/m2.jpeg" alt="" />
+                </div>
+                <div class="col-md-4">
+                  <img class="clientsOpen" src="img/m3.jpg" alt="" />
+                </div>
+              </div> <!-- row -->
+          </div><!-- col-md-8 div -->
+
+        </div> <!-- main row div -->
+      <!-- </div>  main contaier div -->
+   </div>   <!-- open me div -->
+
+
+  <div id="clientsDashboard" class="gallery one" id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="20000">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <img src="img/1.jpeg" class="img-thumbnail">
+          </div>
+
+          <div class="item">
+            <img src="img/2.jpg" class="img-thumbnail">
+          </div>
+
+           <div class="item">
+            <img src="img/5.jpeg" class="img-thumbnail">
           </div>
         </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+          <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+          <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+          <span class="sr-only">Next</span>
+        </a>
       </div>
-    </section>
+   </div>
+
+<footer>
+
+</footer>
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -133,8 +195,38 @@
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
     <script src="js/bootstrap.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/main.js"></script>
 
-  
+    <script>
+    $(document).ready(function(){
+      var $intro = $('.intro-message');
+      var $openMe = $('#openMe');
+      var $close = $('.close');
+      var $image = $('.gallery');
+      var $closeId = $('#clientsDashboard .close');
+        $intro.click(function(){
+         $openMe.slideDown();
+
+       });
+
+      $close.click(function(){
+        $openMe.slideUp();
+
+      });
+
+      $closeId.click(function(){
+        $('#clientsDashboard').slideUp();
+      })
+
+      $('.clientsOpen').click(function() {
+          $('#clientsDashboard').slideToggle({
+            direction: "down"
+          }, 300);
+
+        }); // end click
+    });
+
+    </script>
 
   </body>
 </html>
