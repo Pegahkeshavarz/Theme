@@ -21,6 +21,9 @@ a{
 	cursor: pointer;
 }
 
+#me h3{
+	float: right;
+}
 
 #aboutFoot {
   width: 100%;
@@ -60,8 +63,9 @@ a{
 	border: none;
 }
 #education button.view-dip{
-	background-color: #3D3B3C;
+	background-color: transparent;
 	border-color: #1D1A05;
+	color: black;
 }
 #education button.view-dip:hover{
 	background-color: #A9B4C2;
@@ -73,18 +77,10 @@ a{
 
 }
 
-
-#top-link-block.affix-top {
-    position: absolute; /* allows it to "slide" up into view */
-    bottom: -82px; /* negative of the offset - height of link element */
-    left: 10px; /* padding from the left side of the window */
+#education .media-body .media-heading a:hover{
+	cursor: pointer;
+	text-decoration: underline;
 }
-#top-link-block.affix {
-    position: fixed; /* keeps it on the bottom once in view */
-    bottom: 18px; /* height of link element */
-    left: 10px; /* padding from the left side of the window */
-}
-
 
 /* For Small devices */
 @media only screen and (max-width:480px){
@@ -92,7 +88,6 @@ a{
 		display: none;
 	}
 	.panel-group .notCurrent{
-		/*float: right;*/
 		display: none;
 	}
 	.panel-title {
@@ -102,6 +97,12 @@ a{
 		/*height: auto;*/
 		padding: 50px;
 		border-bottom: 2px solid grey;
+	}
+	#education button{
+		font-size: 13px;
+	}
+	#education img{
+		display: none;
 	}
 }
 
@@ -113,7 +114,6 @@ a{
 		float: right;
 	}
 	section#about div.container{
-		/*height: auto;*/
 		padding: 50px;
 		border-bottom: 2px solid grey;
 	}
@@ -132,7 +132,6 @@ a{
 	    margin: 0px !important;
 	}
 	section#about div.container{
-		/*height: auto;*/
 		padding: 50px;
 		border-bottom: 2px solid grey;
 	}
