@@ -33,7 +33,7 @@ function giveBackground(origScrollTop) {
 		bg(true);
 	} else if (origScrollTop.top < nowScroll) {
 		bg(false);
-	} 
+	}
 
 	origScrollTop.top = $(document).scrollTop();
 }
@@ -70,7 +70,7 @@ $(document).ready( function() {
 	var navheight = Number($('.navbar').css('height').slice(0,-2));		//Height of navbar as string
 
 	if (origScrollTop.top > homeTop-navheight) {						//if start in content...
-		bg(false);	
+		bg(false);
 	}
 
 	$(document).scroll( function() {

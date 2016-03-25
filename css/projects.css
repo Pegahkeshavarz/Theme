@@ -7,8 +7,39 @@
 }
 
 #projects{
-  margin-top:5%;
-  margin-bottom: 10%;
+  /*margin-top:5%;*/
+}
+
+.intro-message i{
+  color: rgb(111,219,193);
+}
+
+.intro-message i:hover{
+  color: white;
+}
+
+
+#openMe{
+  display: none;
+  width: 100%;
+  height: auto;
+  background-color: rgba(255,255,255,0.7);
+  top: 82px;
+  left:0;
+  position: fixed;
+  padding: 50px;
+}
+
+.gallery{
+  display: none;
+  width: 70%;
+  height: auto;
+  background-color: rgba(255,255,255,0.7);
+  top: 82px;
+  left:15%;
+  position: fixed;
+
+
 }
 
 #projects .col-md-4 a:hover{
@@ -17,14 +48,24 @@
 
 img{
   width: 100%;
-  height: 264px !important;
+  height: 200px !important;
 }
 
+p{
+  font-size: 1em;
+}
 .image img:hover {
     -webkit-filter: brightness(30%);
 
 }
 
+.image{
+  border: 4px solid rgb(111,219,193);
+}
+
+.row{
+  margin-bottom: 10px !important;
+}
 span.text-content {
   background: rgba(0,0,0,0.5);
   color: white;
@@ -68,4 +109,63 @@ h4{
   margin:10% auto;
   width: 60% !important;
 
+}
+
+footer{
+  margin-top: 10%;
+    display: table;
+    width: 100%;
+    height: 50px;
+    padding:18px 0;
+  text-align: center;
+  color: #f4f4f4;
+  background: url(../img/footer.png) no-repeat bottom center scroll;
+  background-color: #333333;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+footer p{
+  color: white !important;
+  opacity: 0.8;
+}
+
+
+#clientsDropDown {
+  position:absolute;
+  bottom:0;
+  width: 100%;
+  padding-bottom:2%;
+  z-index: 100;
+}
+
+#clientsDashboard img{
+  height:550px !important;
+  background-color: rgba(0,0,0,0.8);
+  padding: 30px;
+}
+
+#clientsDashboard button.close {
+    -webkit-appearance: none;
+    padding: 0;
+    cursor: pointer;
+    background: 0 0;
+    border: 0;
+    position: absolute;
+    right: -5%;
+  }
+
+.fa.fa-hand-o-right{
+  position: relative;
+  top:10%;
+}
+
+#clientsDropDown .clientsClose {
+  background-image: url(images/close.png);
+}
+
+#clientsDropDown .clientsDashboard {
+  display: none;
 }

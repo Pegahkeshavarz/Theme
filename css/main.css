@@ -142,7 +142,19 @@ font-size: 1.7em
   -moz-transition-duration: 1s;
 }
 
-
+footer{
+  display: table;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  color: #f4f4f4;
+  background: url(../img/footer.png) no-repeat bottom center scroll;
+  background-color: #333333;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 /*Howard's Section*/
 #photoContainer  {
