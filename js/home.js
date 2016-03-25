@@ -39,7 +39,7 @@ function bounceLoop(i, bool) {
 		if (i < $('.cImage').length) {
 			//Bounce specific div @ i
 			$('.cImage:eq('+i+')').addClass('animated bounce').delay(100).queue( function() {
-				console.log('bouncelooped: ',i);
+				// console.log('bouncelooped: ',i);
 				//Update i
 				i++;
 				//Recursive Call
