@@ -20,7 +20,7 @@ function onScreenLogo(obj) {
 			if (obj.haveseen != true) {
 				bounceLoop(0, true);
 			}
-			console.log(obj.haveseen);
+			// console.log(obj.haveseen);
 			obj.haveseen = true;
 		} else {
 			// $('.cImage:eq('+i+')').removeClass('animated bounce');
@@ -28,7 +28,7 @@ function onScreenLogo(obj) {
 				bounceLoop(0, false);
 			}
 			obj.haveseen = false;
-			console.log(obj.haveseen);
+			// console.log(obj.haveseen);
 		}
 	}
 }
@@ -39,7 +39,7 @@ function bounceLoop(i, bool) {
 		if (i < $('.cImage').length) {
 			//Bounce specific div @ i
 			$('.cImage:eq('+i+')').addClass('animated bounce').delay(100).queue( function() {
-				console.log('bouncelooped: ',i);
+				// console.log('bouncelooped: ',i);
 				//Update i
 				i++;
 				//Recursive Call
@@ -55,36 +55,41 @@ function bounceLoop(i, bool) {
 }
 function contentInView() {
 	window.setInterval(function() {
-		// console.log('______________');
+		$(document).on('scroll', function() {
+			// console.log('______________');
 
-		var currScrollTop = $(document).scrollTop();
-		var winHeight = $(window).height();
-		// console.log('currScrollTop: ',currScrollTop,'\t\twinHeight: ',winHeight);
+			var currScrollTop = $(document).scrollTop();
+			var winHeight = $(window).height();
+			// console.log('currScrollTop: ',currScrollTop,'\t\twinHeight: ',winHeight);
 
-		var homeTop = Number($('.intro-body').css('height').slice(0,-2));	//content position
-		var navheight = Number($('.navbar').css('height').slice(0,-2));		//Height of navbar as string
+			var homeTop = Number($('.intro-body').css('height').slice(0,-2));	//content position
+			var navheight = Number($('.navbar').css('height').slice(0,-2));		//Height of navbar as string
 
-		var scrollTo = homeTop - navheight;
+			var scrollTo = homeTop - navheight;
 
-		var checker = winHeight*0.4;
+			var checker = winHeight*0.4;
 
-		// NOT USED CURRENTLY, For more specific cases.
-		// var boolish = $(window).width() > 991 && $(window).height() > 709;
-		// var boolish2 = $(window).width() > 626 && $(window).height() > 862;
-		// console.log(boolish, boolish2);
+			// NOT USED CURRENTLY, For more specific cases.
+			// var boolish = $(window).width() > 991 && $(window).height() > 709;
+			// var boolish2 = $(window).width() > 626 && $(window).height() > 862;
+			// console.log(boolish, boolish2);
 
-		if ($(window).width() > 991 && $(window).height() > 709) {
-			if (currScrollTop >= checker) {
-				console.log('scroll');
-				$('body').delay(2000).stop().animate({
-					scrollTop: scrollTo
-				})
-			} else {
-				$('body').delay(2000).stop().animate({
-					scrollTop: 0
-				})
+
+			if ($(window).width() > 991 && $(window).height() > 709) {
+					if (currScrollTop >= checker) {
+						//scroll to content
+						// console.log('scroll');
+						$('body').stop().animate({
+							scrollTop: scrollTo
+						})
+					} else {
+						//top page
+						$('body').stop().animate({
+							scrollTop: 0
+						})
+					}
 			}
-		}
+		}, 2000);
 		// console.log('loop');
 	}, 3000)
 

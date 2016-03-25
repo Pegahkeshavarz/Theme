@@ -50,7 +50,7 @@ a:focus {
   outline: none;
 }
 .navbar-inverse a {
-  color: white !important;
+  color: white;
 }
 .navbar-inverse .nav li a {
   -webkit-transition: background 0s ease-in-out !important;
@@ -120,6 +120,12 @@ height: 64px;
 font-size: 1.7em
 }
 
+.btn-custom:hover{
+  color:white;
+  border: 2px solid rgb(111,219,193);
+  background-color: transparent;
+}
+
 @media (min-width: 767px) {
   .intro {
     height: 100%;
@@ -175,12 +181,14 @@ font-size: 1.7em
   -moz-box-shadow-: 3px 3px 3px 3px #B3B3B3;
   box-shadow: 3px 3px 3px 3px #B3B3B3;
 }
-#homeContent {
-  border-left: 1px solid #B3B3B3;
-  border-right: 1px solid #B3B3B3;
-  padding: 20px;
-  margin-top: -50px;
-  margin-bottom: 50px;
+@media only screen and (min-width: 767) {
+  #homeContent {
+    border-left: 1px solid #B3B3B3;
+    border-right: 1px solid #B3B3B3;
+    padding: 20px;
+    margin-top: -50px;
+    margin-bottom: 50px;
+  }
 }
 #companies {
   list-style-type: none;
@@ -235,9 +243,17 @@ font-size: 1.7em
   padding: 0px 25px 10px;
   margin-left: -10px;
   margin-top: -10px;
+  border-top: 0 none;
 }
-#homeContent h3 {
+#homeContent .row h3 {
   float: left;
+  cursor: default;
+  margin: auto 10px;
+}
+#homeContent p {
+  cursor: default;
+  color: #7F7F7F;
+  margin: 20px;
 }
 #socialMedia {
   list-style-type: none;
@@ -248,6 +264,18 @@ font-size: 1.7em
   float:right;
   margin-right: 20px;
 }
-#socialMedia li img{
-  width: 30px;
+/*@media (min-width: 767) {*/
+  #socialMedia li i{
+    font-size: 2.2em;
+    color: #000000;
+  }
+/*}*/
+@media (max-width: 766) {
+  #homeContent {
+    border-left: 1px solid #B3B3B3;
+    border-right: 1px solid #B3B3B3;
+    padding: 20px;
+    margin-top: -17px;
+    margin-bottom: 50px;
+  }
 }

@@ -1,17 +1,19 @@
 function giveBackground(origScrollTop,  homeTop, navheight) {
-	var nowScroll = $(document).scrollTop();
+	if ($(window).width() >= 767) {
+		var nowScroll = $(document).scrollTop();
 
-	homeTop = Number($('.intro-body').css('height').slice(0,-2));	//content position
-	navheight = Number($('.navbar').css('height').slice(0,-2));		//Height of navbar as string
+		homeTop = Number($('.intro-body').css('height').slice(0,-2));	//content position
+		navheight = Number($('.navbar').css('height').slice(0,-2));		//Height of navbar as string
 
-	if (origScrollTop.top > nowScroll && nowScroll < homeTop-navheight) {
-		//Scroll up, no background if not over content
-		bg(true);
-	} else if (origScrollTop.top < nowScroll) {
-		bg(false);
+		if (origScrollTop.top > nowScroll && nowScroll < homeTop-navheight) {
+			//Scroll up, no background if not over content
+			bg(true);
+		} else if (origScrollTop.top < nowScroll) {
+			bg(false);
+		}
+
+		origScrollTop.top = $(document).scrollTop();
 	}
-
-	origScrollTop.top = $(document).scrollTop();
 }
 function bg(bool) {
 		//Remove background to the navbar on scroll up
@@ -65,6 +67,7 @@ function chkDown() {
 }
 
 $(document).ready( function() {
+	$('.navbar-custom a').stop().css('color','white');
 	var origScrollTop = {top: 0}
 	origScrollTop.top = $(document).scrollTop();
 
@@ -76,7 +79,7 @@ $(document).ready( function() {
 	arrowDown();
 
 	//Checks if it's already in content
-	if (origScrollTop.top > homeTop-navheight) {						//if start in content...
+	if (origScrollTop.top > homeTop-navheight && $(window).width() >= 767) {						//if start in content...
 		bg(false);
 	}
 	//On scroll, navbar background or not
