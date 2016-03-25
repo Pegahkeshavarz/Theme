@@ -35,7 +35,7 @@ function arrowDown () {
 			
 			var scrollTo = homeTop - navheight;
 			// console.log('click down', scrollTo);
-			$('body').animate({scrollTop: scrollTo})
+			$('body').stop().animate({scrollTop: scrollTo})
 		})
 	}
 }
@@ -44,13 +44,16 @@ function hideArrow (navheight, homeTop) {
 	homeTop = Number($('.intro-body').css('height').slice(0,-2));	//content position
 	navheight = Number($('.navbar').css('height').slice(0,-2));		//Height of navbar as string
 
-
-	if ( chkDown() ) {
-		if (currScrollTop < homeTop- 2*navheight) {
-			$('#down').fadeIn();
-		} else {
-			$('#down').fadeOut();
+	if ($(window).width() > 766) {
+		if ( chkDown() ) {
+			if (currScrollTop < homeTop- 2*navheight) {
+				$('#down').fadeIn();
+			} else {
+				$('#down').fadeOut();
+			}
 		}
+	} else {
+		$('#down').hide();
 	}
 }
 function chkDown() {
