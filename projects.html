@@ -60,9 +60,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-8 col-md-offset-2">
-
                <h4 class="intro-message"><strong>View My Projects <i class="fa fa-archive" data-toggle="tooltip" data-placement="left" title="Click Me :D"></i></strong></h4>
-
             <button type="button" name="button" class="btn btn-default btn-custom" data-toggle="modal" data-target="#contactMe">Contact <i class="fa fa-envelope"></i></button>
         </div>
       </div>
@@ -126,13 +124,13 @@
 
               <div class="row">
                 <div class="col-md-4">
-                  <img class="clientsOpen" src="img/m1.jpeg" alt="" />
+                  <img class="clientsOpen hideme" src="img/m1.jpeg" alt="" />
                 </div>
                 <div class="col-md-4">
-                  <img class="clientsOpen" src="img/m2.jpeg" alt="" />
+                  <img class="clientsOpen hideme" src="img/s4.jpg" alt="" />
                 </div>
                 <div class="col-md-4">
-                  <img class="clientsOpen" src="img/m3.jpg" alt="" />
+                  <img class="clientsOpen hideme" src="img/s3.jpg" alt="" />
                 </div>
               </div> <!-- row -->
           </div><!-- col-md-8 div -->
@@ -169,6 +167,18 @@
            <div class="item">
             <img src="img/5.jpeg" class="img-thumbnail">
           </div>
+
+          <div class="item">
+           <img src="img/m1.jpeg" class="img-thumbnail">
+         </div>
+
+         <div class="item">
+          <img src="img/m2.jpeg" class="img-thumbnail">
+        </div>
+
+        <div class="item">
+         <img src="img/s1.jpg" class="img-thumbnail">
+       </div>
         </div>
 
         <!-- Controls -->
@@ -199,6 +209,7 @@
 
     <script>
     $(document).ready(function(){
+      var nowScroll = {top: $(document).scrollTop()};
       var $intro = $('.intro-message');
       var $openMe = $('#openMe');
       var $close = $('.close');
@@ -220,11 +231,37 @@
 
       $('.clientsOpen').click(function() {
           $('#clientsDashboard').slideToggle({
-            direction: "down"
+            direction: "up"
           }, 300);
-
         }); // end click
+
+
+
+        // function giveDiv(origScrollTop) {
+        // 	var nowScrolls = $(document).scrollTop();
+        //
+        // 	if (origScrollTop.top > nowScrolls) {
+        		//Scroll up, no background if not over content
+        //     console.log("up");
+        //
+        // 	} else if (origScrollTop.top < nowScrolls) {
+        //  $openMe.slideUp();
+        //
+        // 	}
+        //
+        //   $intro.click(function(){
+        //    $openMe.slideDown();
+        //
+        //  });
+        // 	origScrollTop.top = $(document).scrollTop();
+        // }
+
+        // $(document).scroll(function(){
+        //   giveDiv(nowScroll);
+        // })
+
     });
+
 
     </script>
 

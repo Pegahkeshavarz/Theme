@@ -1,5 +1,5 @@
 //Should swing the Logos on when the Logos appear in view **NOT WORKING**
-function onScreenLogo() {
+function onScreenLogo(obj) {
 	//Current scrollTop() position
 	var currScrollTop = $(document).scrollTop();
 
@@ -16,10 +16,41 @@ function onScreenLogo() {
 		//	case true: 	add class --> bounces
 		//  case false: remove class--> refreshes the bounce
 		if (currScrollTop+winHeight >= logoScrollTop+logoHeight) {
-			$('.cImage:eq('+i+')').addClass('animated bounce').delay(500);
+			// $('.cImage:eq('+i+')').addClass('animated bounce').delay(500);
+			if (obj.haveseen != true) {
+				bounceLoop(0, true);
+			}
+			console.log(obj.haveseen);
+			obj.haveseen = true;
 		} else {
-			$('.cImage:eq('+i+')').removeClass('animated bounce');
+			// $('.cImage:eq('+i+')').removeClass('animated bounce');
+			if (obj.haveseen != false) {
+				bounceLoop(0, false);
+			}
+			obj.haveseen = false;
+			console.log(obj.haveseen);
 		}
+	}
+}
+
+function bounceLoop(i, bool) {
+	if (bool) {
+		//While 'i' is < # of divs with class .cImage
+		if (i < $('.cImage').length) {
+			//Bounce specific div @ i
+			$('.cImage:eq('+i+')').addClass('animated bounce').delay(100).queue( function() {
+				console.log('bouncelooped: ',i);
+				//Update i
+				i++;
+				//Recursive Call
+				bounceLoop(i, true);
+				//Dequeue this queue
+				$(this).dequeue();
+			})
+			return;
+		}
+	} else {
+		$('.animated.bounce').removeClass('animated bounce');
 	}
 }
 function contentInView() {
@@ -45,11 +76,11 @@ function contentInView() {
 		if ($(window).width() > 991 && $(window).height() > 709) {
 			if (currScrollTop >= checker) {
 				console.log('scroll');
-				$('body').delay(3000).stop().animate({
+				$('body').delay(2000).stop().animate({
 					scrollTop: scrollTo
 				})
 			} else {
-				$('body').delay(3000).stop().animate({
+				$('body').delay(2000).stop().animate({
 					scrollTop: 0
 				})
 			}
@@ -65,8 +96,10 @@ function hoverSwing() {
 }
 
 $(document).ready(function() {
+	var obj = {haveseen: false};
+
 	$(document).scroll( function() {
-		onScreenLogo();
+		onScreenLogo(obj);
 	})
 	hoverSwing();
 	contentInView();
