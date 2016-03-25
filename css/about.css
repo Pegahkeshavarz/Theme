@@ -52,10 +52,40 @@ a{
 .progress-bar-success{
 	background-color: #A9B4C2;
 }
-/*#scrollTop{
+
+.media-body a{
+	color: black;
+}
+.modal-footer{
+	border: none;
+}
+#education button.view-dip{
+	background-color: #3D3B3C;
+	border-color: #1D1A05;
+}
+#education button.view-dip:hover{
+	background-color: #A9B4C2;
+	border-color: #1D1A05;
+	color: #1D1A05;
+}
+#scrollTop{
 	background-color: pink;
 
-}*/
+}
+
+
+#top-link-block.affix-top {
+    position: absolute; /* allows it to "slide" up into view */
+    bottom: -82px; /* negative of the offset - height of link element */
+    left: 10px; /* padding from the left side of the window */
+}
+#top-link-block.affix {
+    position: fixed; /* keeps it on the bottom once in view */
+    bottom: 18px; /* height of link element */
+    left: 10px; /* padding from the left side of the window */
+}
+
+
 /* For Small devices */
 @media only screen and (max-width:480px){
 	.specific_progress{
