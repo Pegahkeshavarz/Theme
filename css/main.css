@@ -236,8 +236,12 @@ font-size: 1.7em
   margin-left: -10px;
   margin-top: -10px;
 }
-#homeContent h3 {
+#homeContent .row h3 {
   float: left;
+  cursor: default;
+}
+#homeContent p {
+  cursor: default;
 }
 #socialMedia {
   list-style-type: none;
