@@ -50,7 +50,7 @@ a:focus {
   outline: none;
 }
 .navbar-inverse a {
-  color: white !important;
+  color: white;
 }
 .navbar-inverse .nav li a {
   -webkit-transition: background 0s ease-in-out !important;
