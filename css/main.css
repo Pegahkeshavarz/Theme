@@ -237,3 +237,18 @@ font-size: 1.7em
   margin-left: -10px;
   margin-top: -10px;
 }
+#homeContent h3 {
+  float: left;
+}
+#socialMedia {
+  list-style-type: none;
+  margin-right: 40px;
+}
+#socialMedia li {
+  display: inline-block;
+  float:right;
+  margin-right: 20px;
+}
+#socialMedia li img{
+  width: 30px;
+}
