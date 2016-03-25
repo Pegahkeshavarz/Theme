@@ -36,6 +36,26 @@ a{
   background-size: cover;
 }
 
+
+.progress-bar{
+	background-color: #1D1A05;
+}
+
+.progress-bar-danger{
+	background-color: #3D3B3C;
+}
+
+.progress-bar-warning{
+	background-color: #5E6572;
+}
+
+.progress-bar-success{
+	background-color: #A9B4C2;
+}
+/*#scrollTop{
+	background-color: pink;
+
+}*/
 /* For Small devices */
 @media only screen and (max-width:480px){
 	.specific_progress{
