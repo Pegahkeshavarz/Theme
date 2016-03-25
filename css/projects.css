@@ -124,6 +124,12 @@ h4{
 
 }
 
+#clientsDashboard img {
+    height: 529px !important;
+    background-color: rgba(0,0,0,0.8);
+    padding: 26px;
+}
+
 footer{
   margin-top: 10%;
     display: none;
@@ -151,6 +157,9 @@ footer{
   }
 }
 
+
+
+
 @media(max-width:600px){
   #openMe p {
     display: none;
@@ -172,6 +181,12 @@ footer{
     display: none;
   }
 
+  #clientsDashboard img{
+    height: 309px !important;
+        background-color: rgba(0,0,0,0.8);
+        padding: 10px;
+  }
+
   #openMe{
     width: 100%;
     height: auto;
@@ -191,19 +206,14 @@ footer p{
 }
 
 
-#clientsDropDown {
+#clientsDashboard {
   position:absolute;
-  bottom:0;
-  width: 100%;
-  padding-bottom:2%;
+  /*bottom:0;*/
+  /*padding-bottom:2%;*/
   z-index: 100;
 }
 
-#clientsDashboard img{
-  height: 309px !important;
-      background-color: rgba(0,0,0,0.8);
-      padding: 10px;
-}
+
 
 #clientsDashboard button.close {
     -webkit-appearance: none;

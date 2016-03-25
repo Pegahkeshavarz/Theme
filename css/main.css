@@ -120,6 +120,12 @@ height: 64px;
 font-size: 1.7em
 }
 
+.btn-custom:hover{
+  color:white;
+  border: 2px solid rgb(111,219,193);
+  background-color: transparent;
+}
+
 @media (min-width: 767px) {
   .intro {
     height: 100%;
