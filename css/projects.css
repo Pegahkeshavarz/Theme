@@ -12,6 +12,7 @@
 
 .intro-message i{
   color: rgb(111,219,193);
+  cursor: pointer;
 }
 
 .intro-message i:hover{
