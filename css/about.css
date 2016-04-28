@@ -1,0 +1,150 @@
+p,
+h1,h2,h3,h4,h5,h6,span{
+	font-family: 'Open Sans', sans-serif;
+}
+
+a{
+	color:white;
+	text-decoration: none;
+}
+
+/* CSS for ALL devices */
+.specific_progress{
+		display: none;
+	}
+}
+.panel-group .badge{
+		float: right;
+	}
+
+.progress-bar:hover{
+	cursor: pointer;
+}
+#me h3, .left-quote{
+	float: left;
+}
+#me h3, .right-quote{
+	float: right;
+}
+#me .well .quote{
+    margin-left: 30px;
+    margin-right: 60px;
+}
+#me .well-lg{
+	padding-bottom: 35px;
+}
+
+#aboutFoot {
+  width: 100%;
+  height: 50px;
+  padding: 100px 0;
+  text-align: center;
+  color: #f4f4f4;
+  background: url(../img/header.png) no-repeat bottom center scroll;
+  background-color: #333333;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+.progress-bar{
+	background-color: #1D1A05;
+}
+
+.progress-bar-danger{
+	background-color: #3D3B3C;
+}
+
+.progress-bar-warning{
+	background-color: #5E6572;
+}
+
+.progress-bar-success{
+	background-color: #A9B4C2;
+}
+
+.media-body a{
+	color: black;
+}
+.modal-footer{
+	border: none;
+}
+#education button.view-dip{
+	background-color: transparent;
+	border-color: #1D1A05;
+	color: black;
+}
+#education button.view-dip:hover{
+	background-color: #A9B4C2;
+	border-color: #1D1A05;
+	color: #1D1A05;
+}
+#scrollTop{
+	background-color: pink;
+
+}
+
+#education .media-body .media-heading a:hover{
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+/* For Small devices */
+@media only screen and (max-width:480px){
+	.specific_progress{
+		display: none;
+	}
+	.panel-group .notCurrent{
+		display: none;
+	}
+	.panel-title {
+		font-size: 14px;
+	}
+	section#about div.container{
+		/*height: auto;*/
+		padding: 50px;
+		border-bottom: 2px solid grey;
+	}
+	#education button{
+		font-size: 13px;
+	}
+	#education img{
+		display: none;
+	}
+}
+
+@media only screen and (max-width:997px) {
+	.specific_progress{
+		display: none;
+	}
+	.panel-group .badge{
+		float: right;
+	}
+	section#about div.container{
+		padding: 50px;
+		border-bottom: 2px solid grey;
+	}
+	.about_sections h2{
+		margin-bottom: 10px !important;
+	}
+}	
+
+/* For Large devices */
+@media only screen and (min-width:997px) {
+
+	.specific_progress{
+		display: none;
+	}
+	#about h2{
+	    margin: 0px !important;
+	}
+	section#about div.container{
+		padding: 50px;
+		border-bottom: 2px solid grey;
+	}
+	.panel-group .badge{
+		float: right;
+	}
+}

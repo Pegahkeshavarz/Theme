@@ -1,0 +1,103 @@
+p,
+h1,h2,h3,h4,h5,h6,span{
+font-family: 'Open Sans', sans-serif;
+}
+
+body{
+  padding-top: 86px;
+  text-align: center;
+  color: #f8f8f8;
+  background: url(../img/headeer.jpg) no-repeat center center;
+  background-size: cover;
+  position: relative;
+}
+
+a{
+  color:white;
+  text-decoration: none;
+}
+
+
+  nav{
+    color:white;
+    padding-top: 5px;
+    border-bottom:4px solid blue !important;
+  }
+
+  .name{
+  font-family: 'Lobster', cursive;
+  font-size: 3.3em;
+  margin-left:2%;
+  color:white;
+
+  }
+
+  .contact{
+    margin-left:21%;
+    display: inline;
+  }
+
+nav ul{
+  display: inline;
+  margin-left: 12%;
+}
+
+nav ul span{
+  font-size:1.5em;
+}
+
+#contact{
+  font-size: 1.69em;
+}
+nav li:hover{
+  background-color: #4c4c4c;
+}
+
+nav a:hover{
+  color: white;
+  text-decoration: none;
+}
+
+.fa{
+  font-size: 2em;
+}
+  nav li{
+    display: inline;
+    list-style: none;
+    padding:10px;
+    font-size: 1.2em;
+    padding-top:20px !important;
+
+  }
+
+@media only screen and (max-width:480px){
+
+    nav ul span{
+      display: none;
+    }
+    .fa{
+      font-size: 1.6em;
+    }
+    .contact{
+      margin:0;
+    }
+
+    nav ul li,
+    .contact .envelope{
+      background: none;
+    }
+    nav ul{
+      margin:-9px;
+    }
+    .contact .envelope{
+
+      padding:10px;
+    }
+    nav .contact #contact{
+      display: none;
+    }
+}
+
+@@media only screen and (min-width:960) {
+
+}
