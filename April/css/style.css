@@ -1,0 +1,186 @@
+* {
+  font-family: 'Open Sans', sans-serif; }
+
+.bg {
+  margin-top: 0;
+  margin-left: 0;
+  background: url("../img/bgfixed.png");
+  background-size: 100% 100%; }
+
+.content {
+  padding-top: 3em;
+  background: white; }
+
+.logo {
+  cursor: default;
+  position: fixed;
+  left: 2em;
+  top: 0.3em;
+  z-index: 3000; }
+
+.logo:hover {
+  cursor: pointer; }
+
+.landing {
+  margin-top: 0; }
+  .landing .title .twelve {
+    border-left: 1px solid rgba(0, 0, 0, 0.4);
+    border-right: 1px solid rgba(0, 0, 0, 0.4);
+    margin-top: 30%;
+    text-align: center; }
+    .landing .title .twelve h1 {
+      text-align: center;
+      font-size: 3em; }
+    .landing .title .twelve p {
+      cursor: default;
+      margin-top: 3em;
+      margin-bottom: 0;
+      animation: mover 1.5s infinite  alternate;
+      color: white; }
+@keyframes mover {
+  0% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(-20px); } }
+.landing:hover {
+  cursor: pointer; }
+
+.navbar #nav {
+  z-index: 3000;
+  list-style-type: none;
+  margin: auto;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  margin-top: 0;
+  height: 3em;
+  margin-bottom: 1em;
+  border-radius: 0px 0px 30px 30px; }
+  .navbar #nav li {
+    vertical-align: top;
+    position: static;
+    display: inline-block;
+    padding: 1em;
+    cursor: default; }
+    .navbar #nav li .under {
+      border-top: 1px solid transparent;
+      border-left: 1px solid transparent;
+      padding-left: 10px;
+      padding-top: 5px;
+      border-radius: 3px 0 0 0; }
+  .navbar #nav li:hover {
+    cursor: pointer;
+    color: rgba(164, 164, 164, 0.79); }
+    .navbar #nav li:hover .under {
+      border-color: #c2c2c2;
+      color: #414141; }
+
+.row {
+  margin: auto; }
+
+.content {
+  position: relative; }
+  .content .row {
+    position: absolute;
+    top: 30%; }
+
+.home .row .four h4 {
+  margin-top: 3em;
+  color: #b4b4b4; }
+  .home .row .four h4 span {
+    color: #323232; }
+.home .row .eight h5 {
+  color: #323232; }
+.home .row .eight p {
+  color: #b4b4b4; }
+
+.about .row {
+  top: 30%; }
+.about h5 {
+  text-align: left;
+  margin-bottom: 2em; }
+.about ul {
+  text-align: center;
+  list-style-type: none; }
+  .about ul li {
+    height: 5em;
+    width: 5em;
+    display: inline-block;
+    vertical-align: top;
+    transform: rotate(45deg);
+    text-align: center;
+    background: rgba(0, 0, 0, 0.48);
+    margin-right: 1.3em;
+    margin-bottom: 2em; }
+    .about ul li div {
+      transform: rotate(-45deg);
+      font-size: 1em;
+      margin-top: 25px;
+      color: white; }
+  .about ul p {
+    vertical-align: top;
+    display: inline-block;
+    margin-left: 1em;
+    width: 19em; }
+.about .three ul li {
+  margin-right: 1.8em; }
+.about .four ul li {
+  margin-right: 1.8em; }
+
+.about #skillset {
+  top: 15%;
+  left: 50%;
+  width: 100px;
+  text-align: center;
+  margin-left: -50px; }
+
+.projects .row {
+  position: static;
+  margin-top: 1em; }
+  .projects .row .columns ul {
+    list-style-type: none; }
+    .projects .row .columns ul li iframe {
+      width: 100%;
+      height: 48em; }
+
+.contact .row {
+  position: static;
+  margin-top: 10em; }
+  .contact .row div.left.six.columns {
+    margin-top: 2em; }
+  .contact .row .columns h4 span {
+    color: rgba(180, 180, 180, 0.8); }
+  .contact .row .columns .rowa ul {
+    list-style-type: none;
+    text-align: center; }
+    .contact .row .columns .rowa ul a li {
+      transform: rotate(45deg);
+      background: rgba(180, 180, 180, 0.8);
+      height: 100px;
+      width: 100px;
+      display: inline-block; }
+      .contact .row .columns .rowa ul a li div {
+        transform: rotate(-45deg);
+        font-size: 1em;
+        margin-top: 25px;
+        color: white;
+        margin-left: -1em;
+        padding-top: 1em; }
+        .contact .row .columns .rowa ul a li div a {
+          color: white;
+          text-decoration: none; }
+    .contact .row .columns .rowa ul a li:last-child {
+      margin-right: 3.6rem; }
+  .contact .row .columns div.rowa.contentBox {
+    margin-top: 3em;
+    height: 2em;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto; }
+  .contact .row .columns input, .contact .row .columns textarea {
+    width: 100%; }
+  .contact .row .contentBox {
+    border: 1px solid rgba(168, 168, 168, 0.8);
+    border-radius: 5px; }
+
+/*# sourceMappingURL=style.css.map */
